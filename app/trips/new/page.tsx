@@ -14,7 +14,7 @@ const NewTrip = () => {
   return (
     <div className="max-w-lg mx-auto mt-10">
       <Card>
-        <CardHeader>New Trip</CardHeader>
+        <CardHeader className="text-2xl">New Trip</CardHeader>
         <CardContent>
           <form
             className="space-y-6"
@@ -28,10 +28,10 @@ const NewTrip = () => {
               });
             }}
           >
-            <div>
+            <div className="mb-3">
               <label
                 htmlFor="title"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block font-medium text-gray-700 mb-1"
               >
                 Trip Title
               </label>
@@ -42,7 +42,7 @@ const NewTrip = () => {
                 placeholder="Kasmir trip..."
                 className={cn(
                   "w-full border border-gray-300 px-3 py-2",
-                  "rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  "rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
                 )}
                 required
               />
@@ -50,7 +50,7 @@ const NewTrip = () => {
               <div>
                 <label
                   htmlFor="title"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block font-medium text-gray-700 mb-1"
                 >
                   Description
                 </label>
@@ -66,7 +66,7 @@ const NewTrip = () => {
                   )}
                 />
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-3">
                 <div>
                   <label
                     htmlFor="title"

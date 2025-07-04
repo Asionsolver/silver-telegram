@@ -40,14 +40,14 @@ const TripsPage = async () => {
           <CardTitle>Welcome back, {session.user?.name}!</CardTitle>
         </CardHeader>
         <CardContent>
-          <p>
+          <p className="flex flex-col">
             {trips.length === 0
               ? "Start planning your next adventure!"
               : `You have ${trips.length} ${
                   trips.length === 1 ? "trip" : "trips"
-                } planned. Here are your upcoming trips: ${
-                  upcomingTrips.length
-                } ${upcomingTrips.length === 1 ? "trip" : "trips"}.`}
+                } planned. Here are your upcoming ${upcomingTrips.length} ${
+                  upcomingTrips.length === 1 ? "trip" : "trips"
+                }.`}
           </p>
         </CardContent>
       </Card>
@@ -77,8 +77,8 @@ const TripsPage = async () => {
                     <CardContent>
                       <p>{trip.description}</p>
                       <p className="text-sm text-gray-500">
-                        {new Date(trip.startDate).toLocaleDateString()} -{" "}
-                        {new Date(trip.endDate).toLocaleDateString()}
+                        {new Date(trip.startDate).toLocaleDateString("en-GB")} -{" "}
+                        {new Date(trip.endDate).toLocaleDateString("en-GB")}
                       </p>
                     </CardContent>
                   </Card>

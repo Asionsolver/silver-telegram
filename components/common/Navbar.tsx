@@ -11,8 +11,8 @@ export const Navbar = ({ session }: { session: Session | null }) => {
           href="/"
           className="text-2xl font-bold text-gray-800 flex items-center"
         >
-          <Plane />
-          <span className="ml-2">TripSculptor</span>
+          <Plane stroke="#42A5F5" />
+          <span className="ml-2 text-[#42A5F5]">TripSculptor</span>
         </Link>
         <div className="flex items-center space-x-4">
           {session ? (
