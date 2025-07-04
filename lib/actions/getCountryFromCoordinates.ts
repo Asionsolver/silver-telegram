@@ -3,6 +3,12 @@ interface GeocodeResult {
   formattedAddress: string;
 }
 
+interface AddressComponent {
+  long_name: string;
+  short_name: string;
+  types: string[];
+}
+
 export async function getCountryFromCoordinates(
   lat: number,
   lng: number
@@ -23,8 +29,8 @@ export async function getCountryFromCoordinates(
   const result = data.results[0];
   // console.log(result);
 
-  const countryComponent = result.address_components.find((component: any) =>
-    component.types.includes("country")
+  const countryComponent = result.address_components.find(
+    (component: AddressComponent) => component.types.includes("country")
   );
   return {
     country: countryComponent ? countryComponent.long_name : "Unknown Country",
