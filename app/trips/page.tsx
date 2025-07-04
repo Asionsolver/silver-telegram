@@ -2,6 +2,8 @@ import { auth } from "@/auth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { prisma } from "@/lib/prisma";
+
+import { Calendar, MapPin } from "lucide-react";
 import Link from "next/link";
 
 const TripsPage = async () => {
@@ -75,10 +77,16 @@ const TripsPage = async () => {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p>{trip.description}</p>
-                      <p className="text-sm text-gray-500">
-                        {new Date(trip.startDate).toLocaleDateString("en-GB")} -{" "}
-                        {new Date(trip.endDate).toLocaleDateString("en-GB")}
+                      <p className="flex items-center">
+                        <MapPin className="inline mr-1" size={16} />
+                        <span>{trip.description}</span>
+                      </p>
+                      <p className=" flex items-center mt-2 text-gray-500">
+                        <Calendar className="inline mr-1" size={16} />
+                        <span>
+                          {new Date(trip.startDate).toLocaleDateString("en-GB")}{" "}
+                          - {new Date(trip.endDate).toLocaleDateString("en-GB")}
+                        </span>
                       </p>
                     </CardContent>
                   </Card>
