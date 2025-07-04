@@ -6,7 +6,7 @@ import {
   verticalListSortingStrategy,
   useSortable,
 } from "@dnd-kit/sortable";
-import { use, useId, useState } from "react";
+import { useId, useState } from "react";
 import { CSS } from "@dnd-kit/utilities";
 import { reorderItinerary } from "@/lib/actions/reorderItinerary";
 

@@ -2,7 +2,7 @@
 
 import { Location, Trip } from "@/app/generated/prisma";
 import Image from "next/image";
-import { clsx } from "clsx";
+
 import { Calendar, MapPin, Plus } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
